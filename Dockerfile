@@ -11,7 +11,7 @@ ENV TSHOCKRELEASE=https://github.com/Pryaxis/TShock/releases/download/v4.4.0-pre
 RUN wget -O server.zip $TSHOCKRELEASE \
   && unzip server.zip \
   && rm server.zip \
-  && mv "$(basename $TSHOCKRELEASE .zip)/*" ./ \
+  && mv "$(basename $TSHOCKRELEASE .zip)"/* ./ \
   && rmdir "$(basename $TSHOCKRELEASE .zip)" \
   && mkdir /config \
   && touch /config/ServerLog.txt \
