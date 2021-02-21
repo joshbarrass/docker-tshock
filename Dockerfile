@@ -6,9 +6,9 @@ RUN  apt-get update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-ENV TSHOCKVERSION=4.3.26
+ENV TSHOCKRELEASE=https://github.com/Pryaxis/TShock/releases/download/v4.4.0-pre15/TShock4.4.0_Pre15_Terraria1.4.1.2.zip
 
-RUN wget https://github.com/Pryaxis/TShock/releases/download/v$TSHOCKVERSION/tshock_$TSHOCKVERSION.zip -O server.zip \
+RUN wget $TSHOCKRELEASE \
   && unzip server.zip \
   && rm server.zip \
   && mkdir /config \
