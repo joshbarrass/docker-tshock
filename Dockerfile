@@ -8,7 +8,7 @@ RUN  apt-get update \
 
 ENV TSHOCKRELEASE=https://github.com/Pryaxis/TShock/releases/download/v4.4.0-pre15/TShock4.4.0_Pre15_Terraria1.4.1.2.zip
 
-RUN wget $TSHOCKRELEASE \
+RUN wget -O server.zip $TSHOCKRELEASE \
   && unzip server.zip \
   && rm server.zip \
   && mkdir /config \
